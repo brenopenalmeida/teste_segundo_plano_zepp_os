@@ -1,0 +1,30 @@
+{
+  "configVersion": "v3",
+  "app": {
+    "appId": 20001,
+    "appName": "BG Only",
+    "appType": "app",
+    "version": { "code": 1, "name": "1.0.0" },
+    "icon": "icon.png",
+    "vender": "zepp",
+    "description": "Exemplo mínimo BG"
+  },
+  "permissions": [
+    "device:os.bg_service",
+    "data:user.hd.heart_rate"
+  ],
+  "runtime": {
+    "apiVersion": { "compatible": "4.0", "target": "4.0", "minVersion": "4.0" }
+  },
+  "targets": {
+    "common": {
+      "module": {
+        "page":        { "pages": ["page/start"] },
+        "app-service": { "services": ["app-service/bg"] }
+      },
+      "platforms": [{"name":"bip6","deviceSource":9765121}],
+      "designWidth": 480
+    }
+  },
+  "defaultLanguage": "en-US"
+}
